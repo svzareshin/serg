@@ -1,4 +1,23 @@
 <html>
-    <p>Hi there!</p>
-    <p>It works!</p>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="">Blog</a></h1>
+        </div>
+
+        {% for post in posts %}
+{#             {% if post.is_published %}#}
+            {{ post }}
+
+
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.context }}</p>
+        </div>
+      {% endfor %}
+
+    </body>
 </html>
